@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>VERIF</title>
+    <script>
+        function checkIfAlpha() {
+            var x = document.getElementById('entry-1').value;
+            var i = 0
+            while (i < x.length && 'A' <= x.charAt(i).toUpperCase() && x.charAt(i).toUpperCase() <= 'Z') {
+                console.log(i)
+                i++;
+            };
+            if (i == x.length) {
+                console.log('its only alpha')
+            } else {
+                console.log('not only alpha')
+            }
+        }
+    </script>
+</head>
+
+<body>
+    <h1>Enter Your UserName</h1>
+    <form>
+        <input type="text" id="entry-1">
+        <input type="button" value="REGISTER" onclick="checkIfAlpha()">
+    </form>
+
+</body>
+
+
+</html>
