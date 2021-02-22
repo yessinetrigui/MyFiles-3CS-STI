@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        table {
+            width: 80%;
+            margin: auto;
+        }
+
+        tr {
+            border: 1px solid black;
+        }
+
+        .head {
+            font-size: 45px;
+            font-family: 'Courier New', Courier, monospace;
+            text-align: center;
+            padding: 2%;
+
+        }
+
+        .num,
+        .res {
+            text-align: center;
+            padding: 15px 150px;
+            font-size: 40px;
+            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+        }
+
+        .num:nth-child(1) {
+            color: green;
+        }
+
+        .num:nth-child(2) {
+            color: blue;
+        }
+
+        .res {
+            color: red;
+        }
+    </style>
+</head>
+
+<body>
+    <script>
+        document.write('<table border="2" padding="15px">')
+        do {
+            var N = Number(prompt('Donner un numero', ''))
+        } while (isNaN(N));
+        document.write('<h1 class="head">Le Table De Multiplication de ' + N + ' Est:</h1>')
+
+        function createTAB(n) {
+            for (var i = 0; i <= 10; i++) {
+
+                document.write('<tr>')
+                document.write('<td class="num">' + n + '</td>')
+                document.write('<td class="num">' + i + '</td>')
+                document.write('<td class="res">' + n * i + '</td>')
+                document.write('</tr>')
+            }
+        }
+        createTAB(N)
+        document.write('</tr>')
+    </script>
+</body>
+
+
+</html>
